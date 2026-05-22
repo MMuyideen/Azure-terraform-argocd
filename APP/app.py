@@ -2,10 +2,6 @@ from flask import Flask, render_template, send_from_directory
 
 app = Flask(__name__)
 
-# @app.route('/')
-# def hello():
-#     return 'Hello, World!, This is Muyideen App for week4 challenge'
-
 @app.route('/static/<path:path>')
 def serve_static(path):
     return send_from_directory('static', path)
